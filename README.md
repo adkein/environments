@@ -1,7 +1,7 @@
 Environments
 ====
 
-The motivating problem is that we have multiple developers working on the code base of one or more production services. We want to release new features quickly and we want to minimize the number of bugs that make it to production.
+The motivating problem is that we have multiple developers working on the code base(s) of one or more production services. We want to release new features quickly and we want to minimize the number of bugs that make it to production.
 
 We should build a staging pipeline to vet combined code changes to all services on the pipeline, in preparation for a release. The staging pipeline should be exposed to conditions and input data as representative as is feasible of real production conditions and input data.
 
