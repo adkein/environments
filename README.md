@@ -18,6 +18,7 @@ There are at least two distinct structures of staging environment, either or bot
 In a single-service staging environment, input data (whether mocked or drawn from upstream in the production pipeline) is fed to the service under test in an isolated staging environment. That service's output data is not fed to services downstream in the pipeline but rather is analyzed directly, whether by some set of assertions (i.e. "end-to-end tests") and/or comparison to a reference data set (i.e. a "diff-test"). In this scheme, changes to the service under test are validated with reference to that service's performance and outputs. No direct reference is made to the effect that any changes to the distribution of the service's output data might have to the full pipeline's performance and final outputs.
 
 Pros: Less costly; easier to parallelize staging of changes to different services; faster iteration.
+
 Cons: No direct view of the changes' impact on downstream services performance or outputs.
 
 ### Full-pipeline staging environments
@@ -25,6 +26,7 @@ Cons: No direct view of the changes' impact on downstream services performance o
 In a full-pipeline staging environment, all of the pipeline's services are run in isolated staging environments that are connected (in the flow of data) to one another. Validation of the changes staged for release is done with reference to the full pipeline's performance and final outputs. Usually, when full-pipeline staging results pass validation, more confidence in the changes is gained than from single-service staging environments. On the other hand, when regressions are identified in full-pipeline staging results, it may be harder to pinpoint their root cause than when the regression arises in a single-service staging run.
 
 Pros: Validation may provide greater confidence in changes.
+
 Cons: Most costly; harder to parallelize staging of changes to different services; slower iteration; harder to pinpoint the cause of a regression.
 
 Development environments
