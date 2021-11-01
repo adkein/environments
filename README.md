@@ -32,7 +32,7 @@ Cons: Most costly; harder to parallelize staging of changes to different service
 Development environments
 ----
 
-By "development environment" I'm referring the environment that a service application might run in on a given developer's workstation, be it their laptop, a cloud instance, or some virtualized environment. The relevant thing is that the developer's workstation might not be dedicated to the purpose of running the service under test. Because of that, some system resources are necessarily shared between the running service and arbitrary other things going on in the developer's workstation. Because of that, results from tests conducted in the developer's workstation are more often not reproducible, so they enstill less confidence in validation of code changes and especially of effects on performance.
+By "development environment" I'm referring to the environment that a service application might run in on a given developer's workstation, be it their laptop, a cloud instance, or some virtualized environment. The relevant thing is that the developer's workstation might not be dedicated to the purpose of running the service under test. Because of that, some system resources are necessarily shared between the running service and arbitrary other things going on in the developer's workstation. Because of that, results from tests conducted in the developer's workstation are more often not reproducible, so they enstill less confidence in validation of code changes and especially of effects on performance.
 
 * * *
 
